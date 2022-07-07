@@ -2,20 +2,21 @@
 #include <stdarg.h>
 #include <stddef.h>
 /**
- * print_c - prints a char
+ * print_char - prints a char
  * @c: char to print
  * Return: 1 for stdout
  */
 
 int print_char(va_list c)
 {
-	char ch = va_arg(c, int);
+	char ch = (char)va_arg(c, int);
+
 	_putchar(ch);
 	return (1);
 }
 
 /**
- *print_s - prints a string
+ *print_string - prints a string
  *@s: string to print
  *Return: the number of char printed
  */
