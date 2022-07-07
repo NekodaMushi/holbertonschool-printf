@@ -53,6 +53,7 @@ int _printf(const char *format, ...)
 			if (f != NULL)
 			{
 				count += f(list);
+				i++;
 			}
 
 			else
