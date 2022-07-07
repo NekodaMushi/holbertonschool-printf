@@ -34,4 +34,14 @@ int print_string(va_list s)
 	return (count);
 }
 
+/**
+ *print_percent - print the % sign
+ *%: symbol to print
+ *Return: return '%'
+ */
+
+int print_percent(va_list list __attribute__((unused)))
+{
+	return (_putchar('%'));
+}
 

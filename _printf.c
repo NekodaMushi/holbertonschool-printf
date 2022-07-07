@@ -3,8 +3,7 @@
 #include "main.h"
 
 /**
- *check - check for format specifiers
- *@format: the format to check
+ *check_type - check for format specifiers
  *Return: the format found
  */
 
@@ -14,6 +13,7 @@ int (*check_type(const char *format, ...))(va_list)
 	check_st pick[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'%', print_percent},
 		{0, NULL},
 	};
 
@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 				count += f(list);
 				i++;
 			}
-
+			
 			else
 			{
 				_putchar(*(format + i));
