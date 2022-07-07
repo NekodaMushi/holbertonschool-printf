@@ -5,7 +5,7 @@
  * @a: ASCII variable used by fct
  * Return: 0 if succeeded
  */
-int ABS(int a)
+long int ABS(long int a)
 {
 	if (a < 0)
 		a = a * -1;
@@ -20,8 +20,8 @@ int ABS(int a)
  */
 int print_int(va_list arg)
 {
-	int nb = va_arg(arg, int);
-	int len = 0, decade = 1, i, digit;
+	long int nb = va_arg(arg, int);
+	long int len = 0, decade = 1, i, digit;
 
 	if (nb == 0)
 		return _putchar('0');
