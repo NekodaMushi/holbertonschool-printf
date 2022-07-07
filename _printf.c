@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -8,11 +6,10 @@
  *Return: the format found
  */
 
-
-static int (*check(const char *format))(va_list)
+int (*check_type(const char *format))(va_list)
 {
 	int i;
-	prt pick[] = {
+	check_st pick[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{0, NULL},
@@ -22,10 +19,10 @@ static int (*check(const char *format))(va_list)
 	{
 		if (pick[i].c == *format)
 		{
-			break;
+			return (pick[i].f);
 		}
 	}
-	return (pick[i].f);
+	return (0);
 }
 /**
  * _printf - print whatever
@@ -50,7 +47,7 @@ int _printf(const char *format, ...)
 		}
 		if (!format[i])
 			return (count);
-		f = check(&format[i + 1]);
+		f = check_type(&format[i + 1]);
 		if (f != NULL)
 		{
 			count += f(list);
