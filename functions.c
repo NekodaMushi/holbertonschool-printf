@@ -7,11 +7,9 @@
  * Return: 1 for stdout
  */
 
-int print_char(va_list c)
+int print_char(va_list list)
 {
-	char ch = (char)va_arg(c, int);
-
-	_putchar(ch);
+	_putchar(va_arg(list, int));
 	return (1);
 }
 
