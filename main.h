@@ -22,18 +22,20 @@ typedef struct check
 /*Functions Prototype from this project:*/
 int _printf(const char *format, ...);
 
-/*Function created for this project*/
-int (*check_type(const char *format, ...))();
+int (*check_type(const char *format, ...))(va_list);
 
-/*Function created before*/
+/*Functions created before*/
 int _putchar(char c);
 
-/*Function print*/
+/*Functions print*/
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_percent(va_list arg);
 int print_int(va_list arg); /* Has to be done*/
 int print_binary(va_list arg);
 
+/* Functions used by functions print */
+void get_binary(int n);
+int binary_lengh(int n);
 
 #endif

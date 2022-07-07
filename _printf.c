@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -21,10 +19,10 @@ int (*check_type(const char *format, ...))(va_list)
 	{
 		if (pick[i].c == *format)
 		{
-			break;
+			return (pick[i].f);
 		}
 	}
-	return (pick[i].f);
+	return (0);
 }
 /**
  * _printf - print whatever
@@ -66,7 +64,6 @@ int _printf(const char *format, ...)
 			_putchar(*(format + i));
 			count++;
 		}
-
 	}
 	va_end(list);
 	return (count);
