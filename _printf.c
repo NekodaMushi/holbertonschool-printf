@@ -15,6 +15,9 @@ int (*check_type(const char *format, ...))(va_list)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percent},
+		{'i', print_int},
+		{'d', print_int},
+		{'b', print_binary},
 		{0, NULL},
 	};
 
@@ -68,7 +71,6 @@ int _printf(const char *format, ...)
 			_putchar(*(format + i));
 			count++;
 		}
-
 	}
 	va_end(list);
 	return (count);
