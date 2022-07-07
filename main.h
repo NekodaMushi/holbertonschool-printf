@@ -22,7 +22,6 @@ typedef struct check
 /*Functions Prototype from this project:*/
 int _printf(const char *format, ...);
 
-/*Functions created for this project*/
 int (*check_type(const char *format, ...))(va_list);
 
 /*Functions created before*/
