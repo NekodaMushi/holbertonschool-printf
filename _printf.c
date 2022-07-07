@@ -8,11 +8,10 @@
  *Return: the format found
  */
 
-
-static int (*check(const char *format))(va_list)
+int (*check_type(const char *format, ...))(va_list)
 {
 	int i;
-	prt pick[] = {
+	check_st pick[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{0, NULL},
@@ -38,33 +37,36 @@ int _printf(const char *format, ...)
 	va_list list;
 	int (*f)(va_list);
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
+
 	va_start(list, format);
-	while (format[i])
+
+	for (i = 0; *(format + i); i++)
 	{
-		for (; format[i] != '%' && format[i]; i++)
+		if (*(format + i) == '%')
 		{
-			_putchar(format[i]);
-			count += 1;
+			if (*(format + i + 1) != '\0')
+			{
+				f = check_type((format + i + 1));
+			}
+			if (f != NULL)
+			{
+				count += f(list);
+			}
+
+			else
+			{
+				_putchar(*(format + i));
+				count++;
+			}
 		}
-		if (!format[i])
-			return (count);
-		f = check(&format[i + 1]);
-		if (f != NULL)
-		{
-			count += f(list);
-			i += 2;
-			continue;
-		}
-		if (!format[i + 1])
-			return (-1);
-		_putchar(format[i]);
-		count++;
-		if (format[i + 1] == '%')
-			i += 2;
 		else
-			i++;
+		{
+			_putchar(*(format + i));
+			count++;
+		}
+
 	}
 	va_end(list);
 	return (count);
