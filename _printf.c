@@ -4,6 +4,7 @@
 
 /**
  *check_type - check for format specifiers
+ *@format: format given
  *Return: the format found
  */
 
@@ -55,7 +56,7 @@ int _printf(const char *format, ...)
 				count += f(list);
 				i++;
 			}
-			
+
 			else
 			{
 				_putchar(*(format + i));

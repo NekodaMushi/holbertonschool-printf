@@ -36,7 +36,7 @@ int print_string(va_list s)
 
 /**
  *print_percent - print the % sign
- *%: symbol to print
+ *@list: list to roll along
  *Return: return '%'
  */
 
