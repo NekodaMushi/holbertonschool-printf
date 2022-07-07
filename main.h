@@ -23,7 +23,7 @@ typedef struct check
 int _printf(const char *format, ...);
 
 /*Functions created for this project*/
-int (*check_type(const char *format))(va_list);
+int (*check_type(const char *format, ...))(va_list);
 
 /*Functions created before*/
 int _putchar(char c);
