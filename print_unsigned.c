@@ -15,7 +15,7 @@ int len_unsigned_int(int nb)
 	unsigned int unsigned_int = nb;
 	int length = 0;
 
-	if (n == 0)
+	if (nb == 0)
 		return (1);
 
 	while (unsigned_int > 0)
@@ -55,5 +55,5 @@ int print_unsigned_int(va_list arg)
 	int n = va_arg(arg, int);
 
 	get_unsigned_int(n);
-	return (len_unsigned_int);
+	return (len_unsigned_int(n));
 }

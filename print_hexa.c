@@ -10,9 +10,9 @@
  *
  */
 
-int len_hexa(int nb)
+int len_hexa(int n)
 {
-	unsigned int hexa = nb;
+	unsigned int hexa = n;
 	int length = 0;
 
 	if (n == 0)
@@ -29,16 +29,16 @@ int len_hexa(int nb)
 /**
  * get_hexa_maj - fct that prints hexadecimal
  *
- * @nb: number to print.
+ * @n: number to print.
  *
  * Return : Nothing
  */
-void get_hexa_maj(int nb)
+void get_hexa_maj(int n)
 {
 	unsigned int nb = n;
 
 	if ((nb / 16) > 0)
-		hexa_maj(nb / 16);
+		get_hexa_maj(nb / 16);
 
 	if (nb % 16 < 10)
 		_putchar((nb % 16) + 48);
@@ -55,12 +55,12 @@ void get_hexa_maj(int nb)
  * Return : Nothing
  */
 
-void get_hexa_min(int nb)
+void get_hexa_min(int n)
 {
 	unsigned int nb = n;
 
 	if ((nb / 16) > 0)
-		hexa_maj(nb / 16);
+		get_hexa_maj(nb / 16);
 
 	if (nb % 16 < 10)
 		_putchar((nb % 16) + 48);
@@ -79,7 +79,7 @@ int print_hexa_maj(va_list arg)
 	int n = va_arg(arg, int);
 
 	get_hexa_maj(n);
-	return (len_hexa);
+	return (len_hexa(n));
 }
 
 /**
@@ -93,5 +93,5 @@ int print_hexa_min(va_list arg)
 	int n = va_arg(arg, int);
 
 	get_hexa_min(n);
-	return (len_hexa);
+	return (len_hexa(n));
 }

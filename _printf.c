@@ -41,8 +41,8 @@ int (*check_type(const char *format, ...))(va_list)
 		{'R', rot13_convert},
 		{'u', print_unsigned_int},
 		{'o', print_octal},
-		{'x', print_hexa},
-		{'X', print_hexa},
+		{'x', print_hexa_maj},
+		{'X', print_hexa_min},
 		{0, NULL},
 	};
 
