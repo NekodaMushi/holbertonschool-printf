@@ -18,6 +18,7 @@ int (*check_type(const char *format, ...))(va_list)
 		{'i', print_int},
 		{'d', print_int},
 		{'b', print_binary},
+		{'R', rot13_convert},
 		{0, NULL},
 	};
 
