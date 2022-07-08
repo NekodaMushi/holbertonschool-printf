@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_lengh - function that return binary lenght.
+ * binary_length - function that return binary length.
  * @n: number to check.
  * Return: binary lengh
  */

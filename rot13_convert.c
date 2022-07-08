@@ -5,14 +5,14 @@
 /**
  *rot13_convert - convert a string in rot 13
  *@arg: string to convert
- *return: the rot13'ed string 
+ *return: the rot13'ed string
  *
  */
 
 int rot13_convert(va_list list)
 {
 	int i;
-	char *str = va_arg(list, char*);
+	char *str = va_arg(list, char *);
 
 	if (str == NULL)
 		str = "(null)";
@@ -24,5 +24,5 @@ int rot13_convert(va_list list)
 			_putchar(str[i] - 13);
 		else
 			_putchar(str[i]);
-	return(i);
+	return (i);
 }
