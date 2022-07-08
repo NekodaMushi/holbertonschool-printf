@@ -9,18 +9,18 @@
  *
  */
 
-int rot13_convert(va_list arg)
+int rot13_convert(va_list list)
 {
 	int i;
-	char *str = va_arg(arg, char*);
+	char *str = va_arg(list, char*);
 
 	if (str == NULL)
 		str = "(null)";
 
 	for (i = 0; str[i] != '\0'; i++)
-		if ((str[i] >= 97 && str[i] <= 109) || (str[i] >= 65 && str[i] <= 77))
+		if ((str[i] >= 'a' && str[i] <= 'M') || (str[i] >= 'A' && str[i] <= 'M'))
 			_putchar(str[i + 13]);
-		else if ((str[i] >= 110 && str[i] <= 122) || (str[i] >= 78 && str[i] <= 90))
+		else if ((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] <= 'Z'))
 			_putchar(str[i] - 13);
 		else
 			_putchar(str[i]);
