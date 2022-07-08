@@ -18,6 +18,10 @@ int (*check_type(const char *format, ...))(va_list)
 		{'i', print_int},
 		{'d', print_int},
 		{'b', print_binary},
+		{'u', print_hexa},
+		{'o', print_hexa},
+		{'x', print_hexa_min},
+		{'X', print_hexa_maj},
 		{0, NULL},
 	};
 
