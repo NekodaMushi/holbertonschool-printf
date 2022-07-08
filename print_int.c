@@ -14,7 +14,7 @@ long int ABS(long int a)
 
 /**
  * print_int - fct that return interger
- * @i: number to check
+ * @arg: number to check
  * Return: number
  *
  */
