@@ -15,6 +15,8 @@ int print_string(va_list s);
 int print_percent(va_list list);
 int print_binary(va_list arg);
 int print_int(va_list arg);
+int print_unsigned_int(va_list arg);
+int print_octal(va_list arg);
 int print_hexa(va_list arg);
 
 #endif
