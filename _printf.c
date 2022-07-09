@@ -1,24 +1,4 @@
 #include <stdio.h>
-#include "main.h"
-
-/**
- * factorial - function that returns the factorial of a given number.
- *
- * @n: string used in recursion
- *
- * Return: fct
- */
-int factorial(int n)
-{
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (1);
-	else
-		return (n * factorial(n - 1));
-}
-
-#include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
 
@@ -43,6 +23,7 @@ int (*check_type(const char *format, ...))(va_list)
 		{'o', print_octal},
 		{'x', print_hexa_maj},
 		{'X', print_hexa_min},
+		{'S', print_S},
 		{0, NULL},
 	};
 
