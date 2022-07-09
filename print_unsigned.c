@@ -13,7 +13,7 @@
 int len_unsigned_int(int nb)
 {
 	unsigned int unsigned_int = nb;
-	int length = 0;
+	int length = 1;
 
 	if (nb == 0)
 		return (1);
@@ -27,7 +27,7 @@ int len_unsigned_int(int nb)
 }
 
 /**
- * get_octal - fct that prints unsigned_int
+ * get_unsigned_int - fct that prints unsigned_int
  *
  * @nb: number to print.
  *
