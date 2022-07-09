@@ -18,10 +18,10 @@ int len_unsigned_int(int nb)
 	if (nb == 0)
 		return (1);
 
-	while (unsigned_int > 0)
+	while (unsigned_int > 10)
 	{
-		length++;
 		unsigned_int /= 10;
+		length++;
 	}
 	return (length);
 }

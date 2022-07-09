@@ -66,7 +66,7 @@ void get_hexa_min(int n)
 		_putchar((nb % 16) + 48);
 
 	else
-		_putchar((nb % 16) + 70);
+		_putchar((nb % 16) + 87);
 }
 /**
  * print_hexa - get the integer from _printf
