@@ -44,7 +44,7 @@ void get_hexa_maj(int n)
 		_putchar((nb % 16) + 48);
 
 	else
-		_putchar((nb % 16) + 55);
+		_putchar((nb % 16) + 87);
 }
 
 /**
