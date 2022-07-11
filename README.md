@@ -17,7 +17,7 @@ On Ubuntu 20.04 LTS.
 
 This file contains all prototypes of functions and the struct we use for printing with the right function
 
-###_printf.C
+### _printf.C
 
 The Keyfile for imitating printf function.
 Our _printf takes as first argument a const char pointer, and second argument are of variadic type.
@@ -25,14 +25,14 @@ It returns an int, the number of character(s) printed.
 
 ### Other files
 
-** String functions **
+**String functions**
 
 _putchar.c / stringfunctions.c / print_S.c
 
-** Numeric functions **
+**Numeric functions**
 
 print_int.c / print_uns.c / print_binary.c / print_hexa.c / print_octal.c / 
 
-** Special **
+**Special**
 
 rot13_convert.c
