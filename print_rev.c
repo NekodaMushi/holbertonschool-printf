@@ -1,37 +1,24 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stddef.h>
 
-/**
- *
- *
- *
+/*
+ * print_rev - prints a given string in reverse
+ * @list: the string given in argument
+ * Return: lenght of reversed string
  */
 
 int print_rev(va_list list)
 {
-	int len = 0, i, count;
+	int i = 0, j;
 	char *str = va_arg(list, char *);
 
-	if (str == NULL)
+	if (!str)
 		str = "(null)";
+	while (str[i])
+		i++;
 
-	while (*str != '\0')
-	{
-		len++;
-		str++;
-	}
+	for (j = i - 1; j >= 0; j--)
+		_putchar(str[j]);
 
-	str--;
-
-	for (i = len; i > 0; i--)
-	{
-		_putchar(*str);
-		str--;
-	}
-	for (count = 0; str[count]; count++)
-	{
-		_putchar(str[count]);
-	}
-	return (count);
+	return (i);
 }
