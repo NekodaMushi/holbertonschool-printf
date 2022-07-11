@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * len_octal - fct that returns the length
- * of a octal
+ * len_octal - fct that returns the length of a octal
  *
  * @nb: number to check
  *
- * Return - octal length
+ * Return: octal length
  *
  */
 

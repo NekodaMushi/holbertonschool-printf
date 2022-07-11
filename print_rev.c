@@ -3,9 +3,9 @@
 #include <stddef.h>
 
 /**
- *
- *
- *
+ * print_rev - Reverse a string
+ * @list: arg used
+ * Return: Count
  */
 
 int print_rev(va_list list)
