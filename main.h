@@ -18,6 +18,10 @@ int print_int(va_list arg);
 int rot13_convert(va_list list);
 int print_unsigned_int(va_list arg);
 int print_octal(va_list arg);
-int print_hexa(va_list arg);
+int print_S(va_list list);
+int print_2hex(char c);
+int pick_x(va_list list);
+int pick_X(va_list list);
+int print_hexa(unsigned int num, int up_low);
 
 #endif
