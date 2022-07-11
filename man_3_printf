@@ -1,0 +1,84 @@
+.TH man section 3 "22/07/11" "_printf man page"
+
+.SH NAME
+_printf /- format and print data (holberton's students rebuilding printf)
+
+.SH SYNOPSIS
+.B _printf
+FORMAT
+[\fB-ARGUMENT\fR]...
+
+.SH DESCRIPTION
+Print ARGUMENT(s) according to OPTION:
+
+.SH OPTIONS
+.TP
+.BR \-c 
+ prints a character
+
+.TP
+.BR \-s
+ prints a string
+
+.TP
+.BR \-%
+ prints a %
+
+.TP
+.BR \-i "," \-d
+ prints a interger
+
+.TP
+.BR \-b 
+ prints a integer in binary base
+
+.TP
+.BR \-R 
+ prints a integer in ROT13 format
+
+.TP
+.BR \-u
+ prints a unsigned integer
+
+.TP
+.BR \-o 
+ prints a integer in octal base
+
+.TP
+.BR \-x "," \-X 
+ prints a unsigned lowercase or uppercase hexadecimal in integer
+
+.TP
+.BR \-S
+ prints a string inside the range of 33 to 126
+
+.TP 
+.BR \-r 
+ prints a reversed string
+
+.SH EXAMPLE
+
+.TP
+To print a percent
+
+.BR INPUT:
+.BR
+ _printf("50%% of the content from female magazine is about how to accept yourself the other 50%% is about how to lose weight");
+
+.BR OUTPUT:
+.BR
+50% of the content from female magazine is about how to accept yourself the other 50% is about how to lose weight
+.SH RETURN VALUE
+.TP
+
+.BR Characters
+      Success
+.TP
+.BR -1 
+      Invalide option
+
+.SH AUTHORS
+.BR
+Anthony Pizzoni
+.BR
+Fabien Pineau

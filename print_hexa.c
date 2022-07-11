@@ -1,97 +1,73 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
- * len_hexa - fct that returns the length
- * of a hexa
- *
- * @nb: number to check
- *
- * Return - hexadecimal length
- *
+ * pick_x - prints hex num in lowercase
+ * @list: the num to convert and print
+ * Return: lenght of the hex
  */
 
-int len_hexa(int n)
+int pick_x(va_list list)
 {
-	unsigned int hexa = n;
-	int length = 0;
+	return (print_hexa(va_arg(list, unsigned int), 0));
+}
 
-	if (n == 0)
-		return (1);
+/**
+ * pick_X - prints hex num in uppercase
+ * @list: the num to convert and print
+ * Return: lenght of the hex
+ */
 
-	while (hexa > 0)
+int pick_X(va_list list)
+{
+	return (print_hexa(va_arg(list, unsigned int), 1));
+}
+
+/**
+ * print_hexa - takes a num and convert it to lower
+ * or upper hexa
+ * @num: the num to convert
+ * @up_low: parameter for choosing upper or lower hex
+ * Return: lenght of the hex
+ */
+
+int print_hexa(unsigned int num, int up_low)
+{
+	int i = 0, j, count = 0;
+	unsigned int diff;
+	unsigned int rem;
+	char hex[17];
+
+	if (up_low == 1)
+		diff = 7;
+	else
+		diff = 39;
+	if (num == 0)
 	{
-		length++;
-		hexa /= 16;
+		_putchar('0');
+		return (1);
 	}
-	return (length);
-}
 
-/**
- * get_hexa_maj - fct that prints hexadecimal
- *
- * @n: number to print.
- *
- * Return : Nothing
- */
-void get_hexa_maj(int n)
-{
-	unsigned int nb = n;
+	while (num != 0)
+	{
+		rem = num % 16;
+		if (rem < 10)
+		{
+			rem += 48;
+		}
+		else
+		{
+			rem += diff + 48;
+		}
+		hex[i] = rem;
+		i++;
+		num /= 16;
+		count++;
+	}
 
-	if ((nb / 16) > 0)
-		get_hexa_maj(nb / 16);
-
-	if (nb % 16 < 10)
-		_putchar((nb % 16) + 48);
-
-	else
-		_putchar((nb % 16) + 55);
-}
-
-/**
- * get_hexa_min - fct that prints hexadecimal
- *
- * @nb: number to print.
- *
- * Return : Nothing
- */
-
-void get_hexa_min(int n)
-{
-	unsigned int nb = n;
-
-	if ((nb / 16) > 0)
-		get_hexa_maj(nb / 16);
-
-	if (nb % 16 < 10)
-		_putchar((nb % 16) + 48);
-
-	else
-		_putchar((nb % 16) + 87);
-}
-/**
- * print_hexa - get the integer from _printf
- *  and convert
- * @arg: integer to print.
- * Return: hexadecimal number length
- */
-int print_hexa_maj(va_list arg)
-{
-	int n = va_arg(arg, int);
-
-	get_hexa_maj(n);
-	return (len_hexa(n));
-}
-
-/**
- * print_hexa - get the integer from _printf
- *  and convert
- * @arg: integer to print.
- * Return: hexadecimal number length
- */
-int print_hexa_min(va_list arg)
-{
-	int n = va_arg(arg, int);
-
-	get_hexa_min(n);
-	return (len_hexa(n));
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(hex[j]);
+	}
+	return (count);
 }
