@@ -24,6 +24,7 @@ int (*check_type(const char *format, ...))(va_list)
 		{'x', pick_x},
 		{'X', pick_X},
 		{'S', print_S},
+		{'r', print_rev},
 		{0, NULL},
 	};
 

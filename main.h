@@ -23,5 +23,6 @@ int print_2hex(char c);
 int pick_x(va_list list);
 int pick_X(va_list list);
 int print_hexa(unsigned int num, int up_low);
+int print_rev(va_list list);
 
 #endif
