@@ -8,8 +8,13 @@ typedef struct print
 	int (*f)(va_list);
 } check_st;
 
+/*Function created before*/
 int _putchar(char c);
+
+/*Functions created for this project*/
 int _printf(const char *format, ...);
+
+/*And Used by _printf function*/
 int print_char(va_list c);
 int print_string(va_list s);
 int print_percent(va_list list);

@@ -3,7 +3,7 @@
 #include <stddef.h>
 /**
  * print_S - print the string of non-printable
- * characters which may occurs in stdin, i.e. the chars 
+ * characters which may occurs in stdin, i.e. the chars
  * outside the range of [32 - 126] from ASCII table
  * @list: the string to be converted
  * Return: lenght of output

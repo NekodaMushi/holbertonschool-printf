@@ -9,7 +9,7 @@
 
 int pick_x(va_list list)
 {
-	return(print_hexa(va_arg(list, unsigned int), 0));
+	return (print_hexa(va_arg(list, unsigned int), 0));
 }
 
 /**
@@ -20,11 +20,11 @@ int pick_x(va_list list)
 
 int pick_X(va_list list)
 {
-	return(print_hexa(va_arg(list, unsigned int), 1));
+	return (print_hexa(va_arg(list, unsigned int), 1));
 }
 
 /**
- * print_hexa - takes a num and convert it to lower 
+ * print_hexa - takes a num and convert it to lower
  * or upper hexa
  * @num: the num to convert
  * @up_low: parameter for choosing upper or lower hex
@@ -57,7 +57,7 @@ int print_hexa(unsigned int num, int up_low)
 		}
 		else
 		{
-			rem +=  diff + 48;
+			rem += diff + 48;
 		}
 		hex[i] = rem;
 		i++;

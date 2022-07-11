@@ -5,7 +5,7 @@
  * @n: number to check.
  * Return: binary lengh
  */
-int binary_lengh(int n)
+int binary_length(int n)
 {
 	unsigned int bin = n;
 	int lengh = 0;
@@ -47,5 +47,5 @@ int print_binary(va_list arg)
 	int n = va_arg(arg, int);
 
 	get_binary(n);
-	return (binary_lengh(n));
+	return (binary_length(n));
 }
