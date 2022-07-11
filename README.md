@@ -4,6 +4,8 @@
 ## General
 
 Hello and Welcome ! We are Fabien Pineau and Anthony Pizzoni.For this first team project, we have created our own version of the printf function, in C langage.
+Fabien is https://github.com/NekodaMushi on Github
+Anthony is https://github.com/HINKOKO on Github.
 
 ## Requirements
 
@@ -36,3 +38,14 @@ print_int.c / print_uns.c / print_binary.c / print_hexa.c / print_octal.c /
 **Special**
 
 rot13_convert.c
+
+**Sample Example**
+
+If you want to convert "jr unq n ybg bs sha!" in ROT13 you use the function like this
+
+_printf("%R", "jr unq n ybg bs sha!") and the output will be :
+"we had a lot of fun!".
+
+
+
+
