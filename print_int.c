@@ -31,7 +31,7 @@ int print_int(va_list arg)
 		len += _putchar('-');
 	}
 
-	while ((ABS(nb / decade)) > 9)
+	while ((_abs(nb / decade)) > 9)
 		decade *= 10;
 
 	i = decade;
