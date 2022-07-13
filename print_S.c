@@ -56,8 +56,7 @@ int print_2hex(char c)
 		count++;
 	}
 	if (count == 1)
-		_putchar('0');
-	count++;
+		_putchar('0'), count++;
 	for (j = i - 1; j >= 0; j--)
 		_putchar(arr[j]);
 	return (count);
