@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdarg.h>
 
-/*
+/**
  * print_rev - prints a given string in reverse
  * @list: the string given in argument
  * Return: lenght of reversed string
- */
+ **/
 
 int print_rev(va_list list)
 {
